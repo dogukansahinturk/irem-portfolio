@@ -23,10 +23,24 @@ export default function Home() {
       </div>
       <div className="grid justify-center gap-2">
         <div className="flex flex-col items-center gap-4">
-          <h2 className="text-4xl font-semibold">Hello! I'am </h2>
+          <h2 className="text-4xl font-semibold">Hello! I&apos;am </h2>
         </div>
         <div className="flex items-center">
           <h1 className="text-6xl font-bold ml-2 text-blue-500">Irem Sahinturk.</h1>
+        </div>
+        <div className="flex items-center">
+          <h2 className="text-4xl font-semibold">
+            I&apos;m a&nbsp;
+            <span className="circle-sketch-highlight">Frontend Developer.</span>
+            {/* and continue */}
+          </h2>
+        </div>
+        <div>
+          <p className="text-lg text-gray-600">
+            I am a <span className="underline decoration-wavy underline-offset-4">frontend developer</span> with a passion for creating beautiful and
+            functional user interfaces. I love to learn new technologies and
+            improve my skills.
+          </p>
         </div>
       </div>
     </div>
