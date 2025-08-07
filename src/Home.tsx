@@ -1,6 +1,4 @@
 import { DraftingCompassIcon } from "lucide-react";
-import Link from 'next/link'
-
 
 export default function Home() {
   return (
@@ -11,13 +9,13 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4">
           <div className="border-b-2 border-black">
-            <Link href="/about">About</Link>
+            <a href="/about">About</a>
           </div>
           <div className="border-b-2 border-black">
-            <Link href="/work">Work</Link>
+            <a href="/work">Work</a>
           </div>
           <div className="border-b-2 border-black">
-            <Link href="/resume">Resume</Link>
+            <a href="/resume">Resume</a>
           </div>
         </div>
       </div>
