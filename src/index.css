@@ -45,7 +45,8 @@
 
 @theme {
   --color-mavi: #1A25C5;
-  --color-mavi-italic: #FFCA39;
+  --color-mavi-yellow: #FFCA39;
+  --color-mavi-yellow-background: #FFEFC2;
   --color-link: #1A25C5;
 }
 
