@@ -1,10 +1,10 @@
 .PHONY: *
 SHELL := /bin/bash
 
-install: ## Install NPM packages
+
+install:
 	@echo "Installing NPM packages..."
-	corepack enable
-	yarn install
+	@corepack enable && yarn install
 
 run:
-  yarn dev
+	@yarn dev

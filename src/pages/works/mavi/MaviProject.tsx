@@ -8,13 +8,14 @@ import storeInterviewPlan from '@/assets/mavi/store-interview-plan.svg';
 import interviewHeaderRedIcon from '@/assets/mavi/interview-header-red-icon.svg';
 import interviewHeaderYellowIcon from '@/assets/mavi/interview-header-yellow-icon.svg';
 import interviewScreenshots from '@/assets/mavi/interview-screenshots.svg';
+import keyInsightsChatIcon from '@/assets/mavi/key-insights-chat-icon.svg';
 import { Button } from '@/common/shadcn/components/button';
 
 export default function MaviProject() {
   return (
     <div className="font-light scroll-smooth tracking-wider">
 
-      <div className="bg-mavi">
+      <div className="bg-mavi mb-16">
         <div className="mx-auto max-w-7xl px-4 lg:px-6 py-10 lg:py-16 grid lg:grid-cols-2 gap-20 items-center">
           <div className='relative'>
             <div className='grid place-items-center'>
@@ -68,7 +69,7 @@ export default function MaviProject() {
         </div>
       </div>
 
-      <div className='mx-auto max-w-7xl px-4 lg:px-6 py-10 lg:py-16'>
+      <div className='mx-auto max-w-7xl px-4 lg:px-6'>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
           <div className='flex flex-col'>
             <div className='flex justify-center'>
@@ -134,8 +135,7 @@ export default function MaviProject() {
       </div>
 
       <Section id="about" title="About Mavi & Project Scope">
-        {/* <div> */}
-          <div className='grid justify-center mx-auto max-w-3xl px-4 lg:px-6 py-10 lg:py-16 leading-7'>
+          <div className='grid justify-center mx-auto max-w-3xl px-4 lg:px-6 mt-16 leading-7'>
             <p>
               <span className='font-extrabold'>About Mavi: </span>
               Mavi is a globally recognized fashion brand that serves customers through retail, wholesale, and digital channels in 
@@ -157,69 +157,71 @@ export default function MaviProject() {
               Based on these findings, UX and UI design solutions were developed to improve engagement, streamline the journey, and better align with user expectations.
             </p>
           </div>
-          <div className="py-6 lg:py-8 grid justify-center">
-            <h2 className='text-2xl font-normal underline decoration-[0.10rem] decoration-wavy underline-offset-4 decoration-mavi-yellow'>
-              RESEARCH
-            </h2>
+
+          <div className='flex flex-col mt-24'>
+            <div className="grid justify-center">
+              <h2 className='text-2xl font-normal underline decoration-[0.10rem] decoration-wavy underline-offset-4 decoration-mavi-yellow'>
+                RESEARCH
+              </h2>
+            </div>
+            <div className='mx-auto max-w-7xl grid lg:grid-cols-4 md:grid-cols-2 px-4 mt-16 lg:px-6 gap-5'>
+              <ResearchCard
+                img={maviReserch1}
+                imgAlt='Research Image 1'
+                count={162}
+                description='app/website benchmarks conducted'
+              />
+
+              <ResearchCard
+                img={maviReserch2}
+                imgAlt='Research Image 2'
+                count={4}
+                description='Mavi store staff interviewed'
+              />
+
+              <ResearchCard
+                img={maviReserch3}
+                imgAlt='Research Image 3'
+                count={522}
+                description='minutes of user interviews recorded'
+              />
+
+              <ResearchCard
+                img={maviReserch4}
+                imgAlt='Research Image 4'
+                count={428}
+                description='user insights gathered'
+              />
+
           </div>
-          <div className='mx-auto max-w-7xl grid lg:grid-cols-4 md:grid-cols-2 px-4 lg:px-6 py-8 lg:py-10 gap-5'>
-            <ResearchCard
-              img={maviReserch1}
-              imgAlt='Research Image 1'
-              count={162}
-              description='app/website benchmarks conducted'
-            />
-
-            <ResearchCard
-              img={maviReserch2}
-              imgAlt='Research Image 2'
-              count={4}
-              description='Mavi store staff interviewed'
-            />
-
-            <ResearchCard
-              img={maviReserch3}
-              imgAlt='Research Image 3'
-              count={522}
-              description='minutes of user interviews recorded'
-            />
-
-            <ResearchCard
-              img={maviReserch4}
-              imgAlt='Research Image 4'
-              count={428}
-              description='user insights gathered'
-            />
           </div>
       </Section>
 
       <Section id="store-stuff-in-depth-interviews" title="Store stuff in-depth interviews">
-        <div className='grid justify-center mx-auto max-w-3xl px-4 lg:px-6 py-10 lg:py-16 leading-7'>
-          <div className='flex flex-col gap-10'>
-            <div className='flex flex-col'>
-              <img src={interviewHeaderRedIcon} width={37} height={34} alt="Interview Header Red Icon" />
-              <div className='flex flex-col gap-10 pl-16 mt-3'>
-                <h2 className='text-3xl font-semibold'>
-                  Interview Goal
-                </h2>
-                <p>
-                  Before conducting user interviews, one-on-one sessions were held with&nbsp;
-                  <span className='underline underline-offset-4 decoration-[0.12rem] decoration-red-500'>4 store staffs</span> 
-                  &nbsp;to gain preliminary insights about customers. These interviews&nbsp;
-                  <span className='font-semibold'>focused on listening to real stories and understanding user complaints, needs, and gaps in knowledge.</span> 
-                  &nbsp;It were also conducted with Mavi store stuffs to explore&nbsp;
-                  <span className='font-semibold'>their expectations from the website.</span> 
-                  &nbsp;Insights gathered from these sessions informed the user interviews, and all findings were later analyzed using a mental model framework.
-                </p>
-              </div>
+        <div className='grid justify-center mx-auto max-w-3xl px-4 lg:px-6 mt-16 leading-7'>
+          <div className='flex flex-col'>
+            <img src={interviewHeaderRedIcon} width={37} height={34} alt="Interview Header Red Icon" />
+            <div className='flex flex-col pl-16 mt-3'>
+              <h2 className='text-3xl font-semibold'>
+                Interview Goal
+              </h2>
+              <p className='mt-12'>
+                Before conducting user interviews, one-on-one sessions were held with&nbsp;
+                <span className='underline underline-offset-4 decoration-[0.12rem] decoration-red-500'>4 store staffs</span> 
+                &nbsp;to gain preliminary insights about customers. These interviews&nbsp;
+                <span className='font-semibold'>focused on listening to real stories and understanding user complaints, needs, and gaps in knowledge.</span> 
+                &nbsp;It were also conducted with Mavi store stuffs to explore&nbsp;
+                <span className='font-semibold'>their expectations from the website.</span> 
+                &nbsp;Insights gathered from these sessions informed the user interviews, and all findings were later analyzed using a mental model framework.
+              </p>
             </div>
           </div>
         </div>
 
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 justify-center mx-auto max-w-6xl px-4 lg:px-6 py-10 lg:py-16 gap-7 leading-7'>
-          <div className='col-span-2'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 justify-center content-center mx-auto max-w-6xl px-4 lg:px-6 mt-16 gap-7 leading-7'>
+          <div className='col-span-2 grid content-center'>
             <div className='flex flex-col gap-8'>
-              <h5 className='text-2xl font-semibold '>
+              <h5 className='text-xl font-semibold '>
                 Research objectives
               </h5>
               <div className='pl-3'>
@@ -248,7 +250,7 @@ export default function MaviProject() {
           </div>
         </div>
 
-        <div className='grid justify-center mx-auto max-w-3xl px-4 lg:px-6 py-10 lg:py-16 leading-7'>
+        <div className='grid justify-center mx-auto max-w-3xl px-4 lg:px-6 mt-24 leading-7'>
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col'>
               <img src={interviewHeaderYellowIcon} width={37} height={34} alt="Interview Header Yellow Icon" />
@@ -265,12 +267,82 @@ export default function MaviProject() {
             </div>
           </div>
         </div>
-
-        <div className='w-full'>
+        <div className='w-full mt-16'>
           <img src={interviewScreenshots} alt="Interview Screenshots" loading='lazy' />
+        </div>
+
+        <div className='flex flex-col mt-24'>
+          <div className='flex justify-center'>
+            <h2 className='text-3xl font-semibold'>
+              Key Insights
+            </h2>
+          </div>
+          <div className='mx-auto max-w-full grid 2xl:grid-cols-4 xl:grid-cols-2 md:grid-cols-2 px-4 mt-16 lg:px-6 gap-5'>
+            <KeyInsightCard/>
+            <KeyInsightCard 
+              title="JEAN SELECTION" 
+              upperText="During the COVID period, customers were hesitant to visit stores, so they called to ask about the fabric, fit, and details of the jeans."
+              lowerText="Since customers can’t replicate the in-store experience online, they call store staff for guidance and product advice."
+            />
+            <KeyInsightCard 
+              title="BEHIND THE COLLECTIONS"
+              upperText="Some customers ask what the “eco-friendly” theme actually means."
+              lowerText="The “eco-friendly” theme features collections like All Blue and reflects a commitment to sustainable production and resource conservation."
+            />
+            <KeyInsightCard 
+              title="JEAN SELECTION"
+              upperText="Customers are not familiar with the stories or features of collections other than All Blue, and they frequently ask us about them."
+              lowerText="Each collection has its own story and features, but users often don’t know what they include—despite recognizing the names."
+            />
+            <KeyInsightCard 
+              title="JEAN SELECTION" 
+              upperText="During the COVID period, customers were hesitant to visit stores, so they called to ask about the fabric, fit, and details of the jeans."
+              lowerText="Since customers can’t replicate the in-store experience online, they call store staff for guidance and product advice."
+            />
+            <KeyInsightCard 
+              title="FIT GUIDANCE"
+              upperText="Customers often struggle to find the right fit and style of jeans that suit their body type and personal preferences."
+              lowerText="This indicates a need for better product descriptions, fit guides, and personalized recommendations on the website to help customers make informed decisions."
+            />
+            <KeyInsightCard 
+              title="PRODUCT DETAILS"
+              upperText="Many customers are unaware of the different fabric types and their benefits, leading to confusion during the purchasing process."
+              lowerText="Providing detailed information about fabric types, care instructions, and styling tips could enhance the online shopping experience."
+            />
+            <KeyInsightCard 
+              title="CUSTOMER SUPPORT"
+              upperText="Customers appreciate the ability to speak with knowledgeable staff who can provide personalized recommendations and answer questions."
+              lowerText="Investing in training for customer support representatives could improve the overall shopping experience and increase customer satisfaction."
+            />
+          </div>
         </div>
       </Section>
 
+    </div>
+  )
+}
+
+const KeyInsightCard = ({title, upperText, lowerText}: {title?: string; upperText?: string; lowerText?: string}) => {
+  return (
+    <div className='border-soft-blue border-3 border-solid rounded-lg w-[357px] h-[599px]'>
+      <div className="flex flex-col h-full">
+        <div className='h-[337px] flex flex-col px-8'>
+          <div className='flex justify-center mt-9'>
+            <img src={keyInsightsChatIcon} alt="Key Insights Chat Icon" loading='lazy' />
+          </div>
+          <div className='flex flex-col gap-4 mt-6 text-xl'>
+            <h3 className='text-xl font-semibold'>{title}</h3>
+            <p>
+              <span className='font-bold text-4xl'>‘</span>
+              {upperText}
+              <span className='font-bold text-4xl leading-none'>’</span>
+            </p>
+          </div>
+        </div>
+        <div className='h-[262px] border-t-3 border-soft-blue rounded-lg flex items-center justify-center px-8'>
+          <p>{lowerText}</p>
+        </div>
+      </div>
     </div>
   )
 }
@@ -288,7 +360,7 @@ const Section = ({
 }) => (
   <section
     id={id}
-    className={`py-5 scroll-mt-24 lg:scroll-mt-28 ${className}`}
+    className={`my-[7.5rem] scroll-mt-24 lg:scroll-mt-28 ${className}`}
     aria-labelledby={`${id}-title`}
   >
     {title && (
