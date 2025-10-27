@@ -48,7 +48,8 @@
   --color-mavi-yellow: #FFCA39;
   --color-mavi-yellow-background: #FFEFC2;
   --color-link: #1A25C5;
-  --color-soft-blue: #03C3FF;
+  --color-key-insights-border: #03C3FF;
+  --color-key-insights-background: #C1F1FF;
 }
 
 :root {
