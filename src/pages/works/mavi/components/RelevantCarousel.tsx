@@ -2,10 +2,13 @@ import { Card, CardContent } from "@/common/shadcn/components/card"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from "@/common/shadcn/components/carousel"
 import { useEffect, useState } from "react"
 
+// @typescript-eslint/no-unused-vars
 export const RelevantCarousel = ({ carouselItems, title }: { carouselItems: any[], title: string }) => {
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
   const [count, setCount] = useState(0)
+
+  console.log({ carouselItems })
 
   useEffect(() => {
     if (!api) {
